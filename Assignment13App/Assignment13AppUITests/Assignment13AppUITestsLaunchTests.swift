@@ -1,13 +1,13 @@
 //
-//  DigimonSwiftUIAppUITestsLaunchTests.swift
-//  DigimonSwiftUIAppUITests
+//  Assignment13AppUITestsLaunchTests.swift
+//  Assignment13AppUITests
 //
 //  Created by Rahul Adepu on 11/6/23.
 //
 
 import XCTest
 
-final class DigimonSwiftUIAppUITestsLaunchTests: XCTestCase {
+final class Assignment13AppUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

@@ -1,14 +1,14 @@
 //
-//  DigimonSwiftUIAppTests.swift
-//  DigimonSwiftUIAppTests
+//  Assignment13AppTests.swift
+//  Assignment13AppTests
 //
 //  Created by Rahul Adepu on 11/6/23.
 //
 
 import XCTest
-@testable import DigimonSwiftUIApp
+@testable import Assignment13App
 
-final class DigimonSwiftUIAppTests: XCTestCase {
+final class Assignment13AppTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
