@@ -1,15 +1,14 @@
 //
-//  PokemonListView.swift
+//  PokemonData.swift
 //  Assignment13App
 //
-//  Created by Rahul Adepu on 11/6/23.
+//  Created by Rahul Adepu on 11/7/23.
 //
 
-import SwiftUI
+import Foundation
 
-struct PokemonListView: View {
-    
-    var pokemonListGen1:[PokemonModel] = [
+struct PokemonData {
+    static var pokemonListGen1:[PokemonModel] = [
         PokemonModel(name: "Bulbasaur", img: "https://db.pokemongohub.net/_next/image?url=%2Fimages%2Fofficial%2Ffull%2F001.png&w=640&q=75"),
         PokemonModel(name: "Ivysaur", img: "https://db.pokemongohub.net/_next/image?url=%2Fimages%2Fofficial%2Ffull%2F002.png&w=640&q=75"),
         PokemonModel(name: "Venusaur", img: "https://db.pokemongohub.net/_next/image?url=%2Fimages%2Fofficial%2Ffull%2F003.png&w=640&q=75"),
@@ -21,7 +20,7 @@ struct PokemonListView: View {
         PokemonModel(name: "Blastoise", img: "https://db.pokemongohub.net/_next/image?url=%2Fimages%2Fofficial%2Ffull%2F009.png&w=640&q=75")
     ]
     
-    var pokemonListGen2:[PokemonModel] = [
+    static var pokemonListGen2:[PokemonModel] = [
         PokemonModel(name: "Chikorita", img: "https://db.pokemongohub.net/_next/image?url=%2Fimages%2Fofficial%2Ffull%2F152.png&w=640&q=75"),
         PokemonModel(name: "Bayleef", img: "https://db.pokemongohub.net/_next/image?url=%2Fimages%2Fofficial%2Ffull%2F153.png&w=640&q=75"),
         PokemonModel(name: "Meganium", img: "https://db.pokemongohub.net/_next/image?url=%2Fimages%2Fofficial%2Ffull%2F154.png&w=640&q=75"),
@@ -33,62 +32,5 @@ struct PokemonListView: View {
         PokemonModel(name: "Feraligator", img: "https://db.pokemongohub.net/_next/image?url=%2Fimages%2Fofficial%2Ffull%2F160.png&w=640&q=75")
     ]
     
-    var body: some View {
-        NavigationStack{
-            VStack{
-                List {
-                    Section {
-                        ForEach(pokemonListGen1, id:\.self){ pokemon in
-                            NavigationLink{
-                                PokemonDetailView(pokemonImage: pokemon.img, pokemonName: pokemon.name)
-                            } label: {
-                                listCell(pokemonImage: pokemon.img, pokemonName: pokemon.name)
-                            }
-                        }
-                    } header: {
-                        Text("Gen 1")
-                            .modifier(SectionHeaderDesign1())
-                    }
-                    Section {
-                        ForEach(pokemonListGen2, id:\.self){ pokemon in
-                            NavigationLink{
-                                PokemonDetailView(pokemonImage: pokemon.img, pokemonName: pokemon.name)
-                            } label: {
-                                listCell(pokemonImage: pokemon.img, pokemonName: pokemon.name)
-                            }
-                        }
-                    } header: {
-                        Text("Gen 2")
-                            .modifier(SectionHeaderDesign1())
-                    }
-                }
-            }
-        }
-    }
-}
-
-#Preview {
-    PokemonListView()
-}
-
-struct listCell: View {
-    
-    var pokemonImage: String
-    var pokemonName: String
-    
-    var body: some View {
-        HStack{
-            AsyncImage(url: URL(string: pokemonImage)) { image in
-                image.resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 150, height: 150)
-            } placeholder: {
-                ProgressView()
-            }
-            
-            Text(pokemonName)
-                .font(.headline)
-                .padding(.leading, 8)
-        }
-    }
+    static var APIEndpoint = "https://db.pokemongohub.net/_next/image?url=%2Fimages%2Fofficial%2Ffull%2F152.png&w=640&q=75"
 }

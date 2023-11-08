@@ -22,7 +22,7 @@ struct LoginPage: View {
                     TextField("Username", text: $username)
                         .modifier(TextFieldDesign1())
                     
-                    SecureField("Username", text: $password)
+                    SecureField("Password", text: $password)
                         .modifier(TextFieldDesign1())
                 }
                 .padding(.bottom, 200)

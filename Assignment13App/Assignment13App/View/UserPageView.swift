@@ -14,29 +14,27 @@ struct UserPageView: View {
     var body: some View {
         VStack{
             WelcomeMessage(username: username)
-            VStack(spacing:35){
-                
+            Group{
                 NavigationLink {
                     PokemonListView()
                 } label: {
                     Text("List View")
-                        .modifier(ButtonDesign1())
                 }
                 
                 NavigationLink {
                     PokemonGridView()
                 } label: {
                     Text("Grid View")
-                        .modifier(ButtonDesign1())
                 }
                 
                 NavigationLink {
                     InterstingScrollView()
                 } label: {
                     Text("Intersting Scroll View")
-                        .modifier(ButtonDesign1())
                 }
             }
+            .modifier(ButtonDesign1())
+            .buttonStyle(.bordered)
             Spacer()
         }
     }
