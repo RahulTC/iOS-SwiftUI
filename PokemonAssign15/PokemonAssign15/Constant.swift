@@ -9,6 +9,7 @@ import Foundation
 
 struct Constant {
     static let pokemonListEndpoint = "https://api.pokemontcg.io/v2/cards?page=1&pageSize=15"
+    
     static let previewPokemon: [PokemonData] = [PokemonData(
         id: "hgss4-1",
         name: "Aggron",

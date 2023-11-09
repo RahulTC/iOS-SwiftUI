@@ -14,22 +14,26 @@ struct PokemonListView: View {
     var body: some View {
         NavigationStack{
             VStack{
-                List(pokemonViewModel.pokemonList){ pokemon in
-                    NavigationLink {
-                        DetailView(pokemon: pokemon)
-                    } label: {
-                        PokemonListCellView(pokemon: pokemon)
-                            .padding(.vertical, 5)
+                List{
+                    ForEach(pokemonViewModel.pokemonList){ pokemon in
+                            PokemonListCellView(pokemon: pokemon)
+                            .background(
+                                NavigationLink("", destination: {
+                                    DetailView(pokemon: pokemon)
+                                })
+                                .opacity(0))
+                            .listRowInsets(.init(top: 5, leading: 20, bottom: 20, trailing: 20))
+                            .listRowSeparator(.hidden)
                     }
                 }
                 .listStyle(.plain)
                 .scrollIndicators(.hidden)
             }
-            .padding()
-            .onAppear{
-                Task{
-                    await pokemonViewModel.getAPIData()
-                }
+            .task {
+                await pokemonViewModel.getAPIData()
+            }
+            .refreshable {
+                await pokemonViewModel.getAPIData()
             }
         }
     }
@@ -42,28 +46,4 @@ struct PokemonListView: View {
 }
 
 
-struct DetailView: View {
-    
-    var pokemon: PokemonData
-    
-    var body: some View {
-        VStack{
-            ZStack{
-                Rectangle()
-                    .frame(width: 350, height: 493.5)
-                    .foregroundStyle(Color.white)
-                    .shadow(radius: 10, x: 0, y: 3)
-                AsyncImage(url: URL(string: pokemon.images.large)){ image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 350, height: 493.5)
-                        
-                } placeholder: {
-                    ProgressView()
-                }
-            }
-            .padding()
-        }
-    }
-}
+

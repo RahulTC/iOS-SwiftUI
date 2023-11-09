@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginPage: View {
     @State var username:String = ""
-    @State var password:String = ""
+    @State var password:String
     
     var body: some View {
         NavigationStack {
@@ -19,7 +19,7 @@ struct LoginPage: View {
                     .fontWeight(.heavy)
                     .padding(.bottom, 250)
                 VStack(spacing: 35) {
-                    TextField("Username", text: $username)
+                    TextField("Username", text: ($username))
                         .modifier(TextFieldDesign1())
                     
                     SecureField("Password", text: $password)
@@ -40,7 +40,7 @@ struct LoginPage: View {
 }
 
 #Preview {
-    LoginPage()
+    LoginPage(username: "", password: "")
 }
 
 

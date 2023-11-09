@@ -14,9 +14,9 @@ class PokemonViewModel: ObservableObject {
     
     func getAPIData() async{
         do{
-            print("Trying to get the data")
+//            print("Trying to get the data")
             let pokemonList = try await networkManager.getDataFromAPI(url: URL(string: Constant.pokemonListEndpoint)!, modelType: PokemonModel.self)
-            print(pokemonList)
+//            print(pokemonList)
             DispatchQueue.main.async {
                 self.pokemonList = pokemonList.data
                 

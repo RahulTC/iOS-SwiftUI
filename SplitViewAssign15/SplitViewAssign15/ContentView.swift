@@ -22,7 +22,7 @@ struct ContentView: View {
                 
                 // Property Wrapper
                 NavigationLink {
-                    NaviagtionSplitViewView()
+                    PropertyWrapperMainView()
                 } label: {
                     Text("Property Wrapper")
                         .modifier(ButtonDesign1())

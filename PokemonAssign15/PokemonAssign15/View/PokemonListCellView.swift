@@ -17,7 +17,7 @@ struct PokemonListCellView: View {
                 Rectangle()
                     .frame(width: 100, height: 141)
                     .foregroundStyle(Color.white)
-                    .shadow(radius: 10, x: 0, y: 3)
+                    .shadow(radius: 10, x: 2, y: 5)
                 AsyncImage(url: URL(string: pokemon.images.small)){ image in
                     image
                         .resizable()
@@ -64,7 +64,7 @@ struct PokemonListCellView: View {
         .background(Color.white)
         .clipShape(
             RoundedRectangle(cornerRadius: 15, style: .continuous))
-        .shadow(color: .black.opacity(0.4), radius: 8, x: 5, y: 8)
+        .shadow(color: .black.opacity(0.4), radius: 6, x: 6, y: 8)
     }
 }
 
