@@ -10,6 +10,7 @@ import SwiftUI
 struct PokemonListView: View {
     
     @StateObject var pokemonViewModel = PokemonViewModel()
+    @State var isErrorOccurred:Bool = false
         
     var body: some View {
         NavigationStack{
@@ -30,11 +31,20 @@ struct PokemonListView: View {
                 .scrollIndicators(.hidden)
             }
             .task {
-                await pokemonViewModel.getAPIData()
+                await pokemonViewModel.getAPIData(urlString: Constant.pokemonListEndpoint)
+                if pokemonViewModel.customError != nil {
+                    isErrorOccurred = true
+                }
             }
             .refreshable {
-                await pokemonViewModel.getAPIData()
+                await pokemonViewModel.getAPIData(urlString: Constant.pokemonListEndpoint)
             }
+            
+        }
+        .alert(isPresented: $isErrorOccurred) {
+            Alert(title: Text(pokemonViewModel.customError?.localizedDescription ?? ""),
+                  message: Text("Try Again"),
+                  dismissButton: .default(Text("Okay")))
         }
     }
 }
