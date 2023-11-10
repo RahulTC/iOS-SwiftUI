@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kit View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="UIKitViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="UIKitViewController" customModule="Assignment15" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Z75-lx-ONQ">
+                                <rect key="frame" x="20" y="258" width="353" height="336"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIKit View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jy-JQ-Q2C">
+                                        <rect key="frame" x="10" y="0.0" width="333" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data From SwiftUI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjc-JC-RUr">
+                                        <rect key="frame" x="10" y="93" width="333" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aA2-GY-WLS">
+                                        <rect key="frame" x="10" y="186" width="333" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="aZ3-KN-wdC"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="1" green="0.4048372543" blue="0.29112473490000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Second ">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="SwiftUI">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                        <font key="NSOriginalFont" size="18" name="Arial-BoldMT"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="UIKitToSecondViewButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yTD-2Q-iV2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6P-SD-Q3f">
+                                        <rect key="frame" x="10" y="286" width="333" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="gfg-Zn-tMf"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="1" green="0.4048372543" blue="0.29112473490000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Back">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="backButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tvF-hp-lRJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aA2-GY-WLS" firstAttribute="leading" secondItem="Z75-lx-ONQ" secondAttribute="leading" constant="10" id="06i-2x-1Dn"/>
+                                    <constraint firstItem="z6P-SD-Q3f" firstAttribute="top" secondItem="aA2-GY-WLS" secondAttribute="bottom" constant="50" id="9Z7-II-9EF"/>
+                                    <constraint firstItem="3Jy-JQ-Q2C" firstAttribute="top" secondItem="Z75-lx-ONQ" secondAttribute="top" id="CrS-H2-x3W"/>
+                                    <constraint firstAttribute="trailing" secondItem="z6P-SD-Q3f" secondAttribute="trailing" constant="10" id="M7v-rf-67C"/>
+                                    <constraint firstItem="Gjc-JC-RUr" firstAttribute="top" secondItem="3Jy-JQ-Q2C" secondAttribute="bottom" constant="50" id="VbX-rw-UM7"/>
+                                    <constraint firstItem="aA2-GY-WLS" firstAttribute="top" secondItem="Gjc-JC-RUr" secondAttribute="bottom" constant="50" id="YCB-ev-Ndd"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Jy-JQ-Q2C" secondAttribute="trailing" constant="10" id="YWd-KI-L8p"/>
+                                    <constraint firstItem="z6P-SD-Q3f" firstAttribute="leading" secondItem="Z75-lx-ONQ" secondAttribute="leading" constant="10" id="bWz-LJ-OMh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gjc-JC-RUr" secondAttribute="trailing" constant="10" id="fYj-r7-IJl"/>
+                                    <constraint firstItem="3Jy-JQ-Q2C" firstAttribute="leading" secondItem="Z75-lx-ONQ" secondAttribute="leading" constant="10" id="gbH-9q-7uN"/>
+                                    <constraint firstItem="Gjc-JC-RUr" firstAttribute="leading" secondItem="Z75-lx-ONQ" secondAttribute="leading" constant="10" id="iRV-yX-Tzo"/>
+                                    <constraint firstAttribute="trailing" secondItem="aA2-GY-WLS" secondAttribute="trailing" constant="10" id="tfQ-Bm-OeK"/>
+                                    <constraint firstAttribute="bottom" secondItem="z6P-SD-Q3f" secondAttribute="bottom" id="zYd-7v-XSd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Z75-lx-ONQ" secondAttribute="trailing" constant="20" id="D8w-cd-rLN"/>
+                            <constraint firstItem="Z75-lx-ONQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="JjP-5e-9jk"/>
+                            <constraint firstItem="Z75-lx-ONQ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fM3-yq-wRM"/>
+                            <constraint firstItem="Z75-lx-ONQ" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="tLy-Rp-VuE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UOz-VT-mdd"/>
+                    <connections>
+                        <outlet property="UIKitViewLabel" destination="3Jy-JQ-Q2C" id="AwM-ex-3Gu"/>
+                        <outlet property="dataFromSwiftUILabel" destination="Gjc-JC-RUr" id="Tf7-X4-JjD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.4122137404579" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -7,18 +7,40 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct LoginPage: View {
+    @State var username:String = ""
+    @State var password:String
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+                Text("Sign in".uppercased())
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .padding(.bottom, 250)
+                VStack(spacing: 35) {
+                    TextField("Username", text: ($username))
+                        .modifier(TextFieldDesign1())
+                    
+                    SecureField("Password", text: $password)
+                        .modifier(TextFieldDesign1())
+                }
+                .padding(.bottom, 200)
+                NavigationLink {
+                    UserPageView(username: username)
+                } label: {
+                    Text("Sign in".uppercased())
+                        .modifier(ButtonDesign1())
+                }
+                Spacer()
+            }
+            .padding(.horizontal, 15)
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    LoginPage(username: "", password: "")
 }
+
+

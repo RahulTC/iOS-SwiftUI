@@ -11,7 +11,7 @@ import SwiftUI
 struct Assignment13AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginPage()
         }
     }
 }
