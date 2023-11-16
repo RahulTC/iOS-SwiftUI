@@ -7,22 +7,36 @@
 
 import Foundation
 
+@MainActor
 class PokemonViewModel: ObservableObject {
     
-    var networkManager = NetworkManager()
     @Published var pokemonList = [PokemonData]()
+    @Published var customError:NetworkError?
+    var manager:NetworkProtocol
     
-    func getAPIData() async{
+    init(manager: NetworkProtocol = NetworkManager()){
+        self.manager = manager
+    }
+    
+    func getAPIData(urlString: String) async{
+        
         do{
-//            print("Trying to get the data")
-            let pokemonList = try await networkManager.getDataFromAPI(url: URL(string: Constant.pokemonListEndpoint)!, modelType: PokemonModel.self)
-//            print(pokemonList)
-            DispatchQueue.main.async {
-                self.pokemonList = pokemonList.data
-                
-            }
+            guard let url = URL(string: urlString) else { throw NetworkError.urlError }
+            let pokemonList = try await manager.getDataFromAPI(url: url, modelType: PokemonModel.self)
+            self.pokemonList = pokemonList.data
         }catch{
-            print(error.localizedDescription)
+            switch error {
+            case is URLError:
+                customError = NetworkError.urlError
+            case is DecodingError:
+                customError = NetworkError.parsingError
+            case NetworkError.dataFormat:
+                customError = NetworkError.dataFormat
+            case NetworkError.serverNotFound:
+                customError = NetworkError.serverNotFound
+            default:
+                customError = NetworkError.dataNotFound
+            }
         }
     }
 }
