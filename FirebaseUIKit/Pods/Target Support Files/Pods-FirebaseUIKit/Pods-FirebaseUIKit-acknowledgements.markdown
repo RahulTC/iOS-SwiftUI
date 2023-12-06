@@ -752,6 +752,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
    limitations under the License.
 
 
+## FirebaseAnalytics
+
+Copyright 2022 Google
+
 ## FirebaseAnonymousAuthUI
 
 
@@ -7172,6 +7176,10 @@ FirestoreEncoder
    See the License for the specific language governing permissions and
    limitations under the License.
 
+
+## GoogleAppMeasurement
+
+Copyright 2022 Google
 
 ## GoogleDataTransport
 

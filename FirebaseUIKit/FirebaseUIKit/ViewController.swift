@@ -61,7 +61,6 @@ class ViewController: UIViewController, FUIAuthDelegate {
             //Handle Login
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let crashVC = storyboard.instantiateViewController(withIdentifier: "CrashViewControllerID") as! CrashViewController
-            print(crashVC)
             self.navigationController?.pushViewController(crashVC, animated: true)
         }else {
             print(error?.localizedDescription ?? "Unknown Error occurred")

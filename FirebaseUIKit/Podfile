@@ -11,6 +11,7 @@ target 'FirebaseUIKit' do
   # Pods for FirebaseUIKit
     pod 'FirebaseUI'
     pod 'Firebase/Crashlytics'
+    pod 'Firebase/Analytics'
 
   target 'FirebaseUIKitTests' do
     inherit! :search_paths
