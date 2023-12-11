@@ -11,6 +11,8 @@ import FirebaseAuth
 import FirebaseAuthUI
 import FirebaseEmailAuthUI
 import FirebaseGoogleAuthUI
+import FirebaseAnalytics
+
 
 class ViewController: UIViewController, FUIAuthDelegate {
 
@@ -58,6 +60,13 @@ class ViewController: UIViewController, FUIAuthDelegate {
         print(user ?? "No User Found")
         
         if error == nil {
+            
+            // Adding Google Analytics to for logging
+            Analytics.logEvent(AnalyticsEventLogin, parameters: [
+                "Event":"Logged In",
+                AnalyticsParameterItemID: "id-\(title!)",
+              ])
+            
             //Handle Login
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let crashVC = storyboard.instantiateViewController(withIdentifier: "CrashViewControllerID") as! CrashViewController

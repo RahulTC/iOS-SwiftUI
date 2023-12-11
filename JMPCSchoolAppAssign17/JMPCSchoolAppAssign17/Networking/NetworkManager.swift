@@ -14,7 +14,6 @@ protocol NetworkProtocol {
 class NetworkManager: NetworkProtocol {
     func getDataFromAPI<T>(url: URL, modelType: T.Type) async throws -> T where T : Decodable {
         do{
-            print("Inside Network Manager")
             let (data, _) = try await URLSession.shared.data(from: url)
             let parsedData = try JSONDecoder().decode(modelType, from: data)
             return parsedData
@@ -22,4 +21,22 @@ class NetworkManager: NetworkProtocol {
             throw error
         }
     }
+    
+//    func getDataFromAPISchoolModel(url: String){
+//        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil)
+//          .response{ resp in
+//              switch resp.result{
+//                case .success(let data):
+//                  do{
+//                    let jsonData = try JSONDecoder().decode([SchoolModel].self, from: data!)
+//                    print(jsonData)
+//                 } catch {
+//                    print(error.localizedDescription)
+//                 }
+//               case .failure(let error):
+//                 print(error.localizedDescription)
+//               }
+//          }
+//    }
+    
 }

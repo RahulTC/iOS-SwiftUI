@@ -11,6 +11,7 @@ struct MainView: View {
     
     @StateObject var jmpcSchoolViewModel = JMPCSchoolViewModel()
     @State var isErrorOccurred:Bool = false
+    @State var loadData:Bool = false
     
     var body: some View {
         NavigationStack{
@@ -36,11 +37,25 @@ struct MainView: View {
                 .scrollIndicators(.hidden)
             }
             .task {
-                await jmpcSchoolViewModel.getAPIData(urlString: Constant.DOEHighSchoolDirectory2017Endpoint)
-                if jmpcSchoolViewModel.customError != nil {
-                    isErrorOccurred = true
+                print("Appear")
+                if !loadData{
+                    print("Load Data")
+                    await jmpcSchoolViewModel.getAPIData(urlString: Constant.DOEHighSchoolDirectory2017Endpoint)
+                    if jmpcSchoolViewModel.customError != nil {
+                        isErrorOccurred = true
+                    }
+                    loadData = true
                 }
             }
+            
+//            .task {
+//                await jmpcSchoolViewModel.getAPIDataUsingAlamofire(urlString: Constant.DOEHighSchoolDirectory2017Endpoint)
+//                if jmpcSchoolViewModel.customError != nil {
+//                    isErrorOccurred = true
+//                }
+//            }
+            
+            
         }
         .alert(isPresented: $isErrorOccurred) {
             Alert(title: Text(jmpcSchoolViewModel.customError?.localizedDescription ?? ""),
