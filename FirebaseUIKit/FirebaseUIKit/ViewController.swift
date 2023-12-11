@@ -12,10 +12,13 @@ import FirebaseAuthUI
 import FirebaseEmailAuthUI
 import FirebaseGoogleAuthUI
 import FirebaseAnalytics
+import FirebaseDatabase
 
 
 class ViewController: UIViewController, FUIAuthDelegate {
 
+    var ref: DatabaseReference = Database.database().reference()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -62,14 +65,15 @@ class ViewController: UIViewController, FUIAuthDelegate {
         if error == nil {
             
             // Adding Google Analytics to for logging
-            Analytics.logEvent(AnalyticsEventLogin, parameters: [
-                "Event":"Logged In",
-                AnalyticsParameterItemID: "id-\(title!)",
-              ])
+//            Analytics.logEvent(AnalyticsEventLogin, parameters: [
+//                "Event":"Logged In",
+//                AnalyticsParameterItemID: "id-\(title!)",
+//              ])
             
             //Handle Login
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let crashVC = storyboard.instantiateViewController(withIdentifier: "CrashViewControllerID") as! CrashViewController
+            crashVC.refDatabase = self.ref
             self.navigationController?.pushViewController(crashVC, animated: true)
         }else {
             print(error?.localizedDescription ?? "Unknown Error occurred")

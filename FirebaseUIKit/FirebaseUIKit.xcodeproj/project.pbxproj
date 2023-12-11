@@ -185,7 +185,7 @@
 				DAAB477D2B1E0EBE003F725E /* Frameworks */,
 				DAAB477E2B1E0EBE003F725E /* Resources */,
 				DA8F59E72B202E9C005293FB /* Run Script */,
-				60B14D2CB19CF6DBA9879999 /* [CP] Embed Pods Frameworks */,
+				9B13527462F4D32F4CA5F91E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,7 +223,7 @@
 				DAAB479C2B1E0EC3003F725E /* Sources */,
 				DAAB479D2B1E0EC3003F725E /* Frameworks */,
 				DAAB479E2B1E0EC3003F725E /* Resources */,
-				E9CE66197CCFF70FB7168EA8 /* [CP] Embed Pods Frameworks */,
+				4750F5117CDDA99A9B78F32C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -329,7 +329,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		60B14D2CB19CF6DBA9879999 /* [CP] Embed Pods Frameworks */ = {
+		4750F5117CDDA99A9B78F32C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseUIKit-FirebaseUIKitUITests/Pods-FirebaseUIKit-FirebaseUIKitUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseUIKit-FirebaseUIKitUITests/Pods-FirebaseUIKit-FirebaseUIKitUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirebaseUIKit-FirebaseUIKitUITests/Pods-FirebaseUIKit-FirebaseUIKitUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B13527462F4D32F4CA5F91E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -412,23 +429,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
-		};
-		E9CE66197CCFF70FB7168EA8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FirebaseUIKit-FirebaseUIKitUITests/Pods-FirebaseUIKit-FirebaseUIKitUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FirebaseUIKit-FirebaseUIKitUITests/Pods-FirebaseUIKit-FirebaseUIKitUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirebaseUIKit-FirebaseUIKitUITests/Pods-FirebaseUIKit-FirebaseUIKitUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
