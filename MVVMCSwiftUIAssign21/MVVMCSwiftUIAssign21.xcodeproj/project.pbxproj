@@ -71,6 +71,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA8F5A472B274E6E005293FB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DA8F5A482B274E79005293FB /* View-Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View-Model";
+			sourceTree = "<group>";
+		};
+		DA8F5A492B274E8E005293FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA8F5A4A2B274E94005293FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DAAB46C72B1E09FD003F725E = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +122,10 @@
 		DAAB46D22B1E09FD003F725E /* MVVMCSwiftUIAssign21 */ = {
 			isa = PBXGroup;
 			children = (
+				DA8F5A4A2B274E94005293FB /* Model */,
+				DA8F5A492B274E8E005293FB /* View */,
+				DA8F5A482B274E79005293FB /* View-Model */,
+				DA8F5A472B274E6E005293FB /* Coordinator */,
 				DAAB46D32B1E09FD003F725E /* MVVMCSwiftUIAssign21App.swift */,
 				DAAB46D52B1E09FD003F725E /* ContentView.swift */,
 				DAAB46D72B1E0A02003F725E /* Assets.xcassets */,

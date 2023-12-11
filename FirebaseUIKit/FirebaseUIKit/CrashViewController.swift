@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseDatabase
 
 class CrashViewController: UIViewController {
-
+    
+    var refDatabase: DatabaseReference?
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        refDatabase = Database.database().reference()
     }
     
     
@@ -29,5 +33,8 @@ class CrashViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func saveUser(_ sender: Any) {
+        refDatabase?.child("Root").childByAutoId().setValue(["data":"Test Data"])
+    }
+    
 }

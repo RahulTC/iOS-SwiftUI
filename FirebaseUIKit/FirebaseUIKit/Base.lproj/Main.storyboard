@@ -64,18 +64,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vo9-N6-9wt">
-                                <rect key="frame" x="135" y="409" width="124" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vo9-N6-9wt">
+                                <rect key="frame" x="39.333333333333343" y="568" width="314.33333333333326" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="55D-RH-Mkn"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Crash Button"/>
                                 <connections>
                                     <action selector="crashButton:" destination="Po0-W4-cSs" eventType="touchUpInside" id="Ok5-n3-hnz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV1-PI-Jlz">
+                                <rect key="frame" x="39.333333333333343" y="668" width="314.33333333333326" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qEA-2Z-R2Z"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="saveUser:" destination="Po0-W4-cSs" eventType="touchUpInside" id="eoV-JU-Jka"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="K9M-ZF-PhR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="K9M-ZF-PhR" firstAttribute="bottom" secondItem="tV1-PI-Jlz" secondAttribute="bottom" constant="100" id="0Fb-sR-muZ"/>
+                            <constraint firstItem="Vo9-N6-9wt" firstAttribute="width" secondItem="zJG-47-cjX" secondAttribute="width" multiplier="0.8" id="LKB-1B-32r"/>
+                            <constraint firstItem="tV1-PI-Jlz" firstAttribute="width" secondItem="zJG-47-cjX" secondAttribute="width" multiplier="0.8" id="iGn-FD-gRJ"/>
+                            <constraint firstItem="tV1-PI-Jlz" firstAttribute="top" secondItem="Vo9-N6-9wt" secondAttribute="bottom" constant="50" id="j3f-QD-6IF"/>
+                            <constraint firstItem="Vo9-N6-9wt" firstAttribute="centerX" secondItem="zJG-47-cjX" secondAttribute="centerX" id="mAi-kZ-xTd"/>
+                            <constraint firstItem="tV1-PI-Jlz" firstAttribute="centerX" secondItem="zJG-47-cjX" secondAttribute="centerX" id="u4w-qE-eIk"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H0s-mt-Lqp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
