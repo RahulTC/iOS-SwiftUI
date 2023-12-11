@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA8F5A0C2B267672005293FB /* CustomPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F5A0B2B267672005293FB /* CustomPin.swift */; };
+		DA8F5A352B26C7FC005293FB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F5A342B26C7FC005293FB /* Constant.swift */; };
+		DA8F5A3D2B26CB45005293FB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F5A3C2B26CB45005293FB /* UserViewModel.swift */; };
+		DA8F5A3F2B26CB6C005293FB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F5A3E2B26CB6C005293FB /* UserModel.swift */; };
+		DA8F5A422B26CBA6005293FB /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F5A412B26CBA6005293FB /* NetworkError.swift */; };
+		DA8F5A442B26CBBF005293FB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F5A432B26CBBF005293FB /* NetworkManager.swift */; };
+		DA8F5A462B26D275005293FB /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F5A452B26D275005293FB /* UserDetailView.swift */; };
 		DAAB46992B1E098F003F725E /* MapAssignment21App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAB46982B1E098F003F725E /* MapAssignment21App.swift */; };
 		DAAB469B2B1E098F003F725E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAB469A2B1E098F003F725E /* ContentView.swift */; };
 		DAAB469D2B1E0994003F725E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAB469C2B1E0994003F725E /* Assets.xcassets */; };
@@ -36,6 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA8F5A0B2B267672005293FB /* CustomPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPin.swift; sourceTree = "<group>"; };
+		DA8F5A342B26C7FC005293FB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		DA8F5A3C2B26CB45005293FB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		DA8F5A3E2B26CB6C005293FB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		DA8F5A412B26CBA6005293FB /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		DA8F5A432B26CBBF005293FB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DA8F5A452B26D275005293FB /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 		DAAB46952B1E098F003F725E /* MapAssignment21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapAssignment21.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAB46982B1E098F003F725E /* MapAssignment21App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAssignment21App.swift; sourceTree = "<group>"; };
 		DAAB469A2B1E098F003F725E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +89,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA8F5A362B26CA92005293FB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DA8F5A402B26CB87005293FB /* NetworkManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		DA8F5A372B26CAAC005293FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA8F5A3C2B26CB45005293FB /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DA8F5A382B26CAB6005293FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAAB469A2B1E098F003F725E /* ContentView.swift */,
+				DA8F5A452B26D275005293FB /* UserDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA8F5A392B26CABD005293FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA8F5A3E2B26CB6C005293FB /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA8F5A402B26CB87005293FB /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				DA8F5A412B26CBA6005293FB /* NetworkError.swift */,
+				DA8F5A432B26CBBF005293FB /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
 		DAAB468C2B1E098F003F725E = {
 			isa = PBXGroup;
 			children = (
@@ -98,12 +154,17 @@
 		DAAB46972B1E098F003F725E /* MapAssignment21 */ = {
 			isa = PBXGroup;
 			children = (
+				DA8F5A362B26CA92005293FB /* Manager */,
+				DA8F5A392B26CABD005293FB /* Model */,
+				DA8F5A382B26CAB6005293FB /* View */,
+				DA8F5A372B26CAAC005293FB /* ViewModel */,
 				DAAB46982B1E098F003F725E /* MapAssignment21App.swift */,
-				DAAB469A2B1E098F003F725E /* ContentView.swift */,
 				DAAB469C2B1E0994003F725E /* Assets.xcassets */,
+				DA8F5A0B2B267672005293FB /* CustomPin.swift */,
 				DAAB46A12B1E0994003F725E /* Persistence.swift */,
 				DAAB46A32B1E0994003F725E /* MapAssignment21.xcdatamodeld */,
 				DAAB469E2B1E0994003F725E /* Preview Content */,
+				DA8F5A342B26C7FC005293FB /* Constant.swift */,
 			);
 			path = MapAssignment21;
 			sourceTree = "<group>";
@@ -264,9 +325,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAAB46A22B1E0994003F725E /* Persistence.swift in Sources */,
+				DA8F5A352B26C7FC005293FB /* Constant.swift in Sources */,
+				DA8F5A442B26CBBF005293FB /* NetworkManager.swift in Sources */,
+				DA8F5A3F2B26CB6C005293FB /* UserModel.swift in Sources */,
 				DAAB469B2B1E098F003F725E /* ContentView.swift in Sources */,
 				DAAB46A52B1E0994003F725E /* MapAssignment21.xcdatamodeld in Sources */,
 				DAAB46992B1E098F003F725E /* MapAssignment21App.swift in Sources */,
+				DA8F5A422B26CBA6005293FB /* NetworkError.swift in Sources */,
+				DA8F5A3D2B26CB45005293FB /* UserViewModel.swift in Sources */,
+				DA8F5A0C2B267672005293FB /* CustomPin.swift in Sources */,
+				DA8F5A462B26D275005293FB /* UserDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

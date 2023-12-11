@@ -1,8 +1,8 @@
 //
 //  UsersViewModel.swift
-//  MapAsignment20
+//  CoreDataAssignment19
 //
-//  Created by Rahul Adepu on 12/10/23.
+//  Created by Rahul Adepu on 11/30/23.
 //
 
 import Foundation
@@ -96,3 +96,5 @@ class UsersViewModel: ObservableObject{
                                                                 longitudeDelta: span))
     }
 }
+
+
