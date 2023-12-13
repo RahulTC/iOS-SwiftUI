@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		DAA5EB692B28EE320087F467 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5EB682B28EE320087F467 /* MainCoordinator.swift */; };
+		DAA5EB722B2972670087F467 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5EB712B2972670087F467 /* StartView.swift */; };
+		DAA5EB742B297ACE0087F467 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5EB732B297ACE0087F467 /* SecondView.swift */; };
+		DAA5EB762B297AF80087F467 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5EB752B297AF80087F467 /* ThirdView.swift */; };
+		DAA5EB782B297B180087F467 /* FourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5EB772B297B180087F467 /* FourthView.swift */; };
 		DAAB46D42B1E09FD003F725E /* MVVMCSwiftUIAssign21App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAB46D32B1E09FD003F725E /* MVVMCSwiftUIAssign21App.swift */; };
 		DAAB46D62B1E09FD003F725E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAB46D52B1E09FD003F725E /* ContentView.swift */; };
 		DAAB46D82B1E0A02003F725E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAB46D72B1E0A02003F725E /* Assets.xcassets */; };
@@ -36,6 +40,10 @@
 
 /* Begin PBXFileReference section */
 		DAA5EB682B28EE320087F467 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		DAA5EB712B2972670087F467 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		DAA5EB732B297ACE0087F467 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		DAA5EB752B297AF80087F467 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
+		DAA5EB772B297B180087F467 /* FourthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthView.swift; sourceTree = "<group>"; };
 		DAAB46D02B1E09FD003F725E /* MVVMCSwiftUIAssign21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMCSwiftUIAssign21.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAB46D32B1E09FD003F725E /* MVVMCSwiftUIAssign21App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMCSwiftUIAssign21App.swift; sourceTree = "<group>"; };
 		DAAB46D52B1E09FD003F725E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,25 +89,15 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		DA8F5A482B274E79005293FB /* View-Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View-Model";
-			sourceTree = "<group>";
-		};
 		DA8F5A492B274E8E005293FB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DAA5EB712B2972670087F467 /* StartView.swift */,
+				DAA5EB732B297ACE0087F467 /* SecondView.swift */,
+				DAA5EB752B297AF80087F467 /* ThirdView.swift */,
+				DAA5EB772B297B180087F467 /* FourthView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		DA8F5A4A2B274E94005293FB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		DAAB46C72B1E09FD003F725E = {
@@ -125,9 +123,7 @@
 		DAAB46D22B1E09FD003F725E /* MVVMCSwiftUIAssign21 */ = {
 			isa = PBXGroup;
 			children = (
-				DA8F5A4A2B274E94005293FB /* Model */,
 				DA8F5A492B274E8E005293FB /* View */,
-				DA8F5A482B274E79005293FB /* View-Model */,
 				DA8F5A472B274E6E005293FB /* Coordinator */,
 				DAAB46D32B1E09FD003F725E /* MVVMCSwiftUIAssign21App.swift */,
 				DAAB46D52B1E09FD003F725E /* ContentView.swift */,
@@ -293,8 +289,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAAB46D62B1E09FD003F725E /* ContentView.swift in Sources */,
+				DAA5EB742B297ACE0087F467 /* SecondView.swift in Sources */,
 				DAA5EB692B28EE320087F467 /* MainCoordinator.swift in Sources */,
 				DAAB46D42B1E09FD003F725E /* MVVMCSwiftUIAssign21App.swift in Sources */,
+				DAA5EB782B297B180087F467 /* FourthView.swift in Sources */,
+				DAA5EB762B297AF80087F467 /* ThirdView.swift in Sources */,
+				DAA5EB722B2972670087F467 /* StartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

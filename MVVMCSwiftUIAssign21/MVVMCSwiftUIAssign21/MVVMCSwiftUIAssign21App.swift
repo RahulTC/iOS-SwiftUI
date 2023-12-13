@@ -11,7 +11,8 @@ import SwiftUI
 struct MVVMCSwiftUIAssign21App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartView()
+                .environmentObject(MainCoordinator())
         }
     }
 }
